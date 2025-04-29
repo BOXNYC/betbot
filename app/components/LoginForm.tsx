@@ -45,7 +45,7 @@ export default function LoginForm({onChange}: {onChange: (token: string) => void
         } finally {
             setIsLoading(false);
         }
-    }, [email, password]);
+    }, [email, password, onChange]);
 
     return (
         <div className="max-w-md mx-auto mt-8">

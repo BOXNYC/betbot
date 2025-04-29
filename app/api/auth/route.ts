@@ -49,6 +49,7 @@ export async function POST(request: NextRequest) {
       };
     });
   } catch (error) {
+    console.error('Failed to load user database:', error);
     return NextResponse.json(
       { error: 'Failed to load user database.' },
       { status: 500 }

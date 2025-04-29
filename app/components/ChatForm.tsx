@@ -64,7 +64,8 @@ export default function ChatForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="prompt" className="block text-sm font-medium mb-1">
-            Ask BetBot
+            Place your bet
+            <span className="text-red-500 ps-2">*</span>
           </label>
           <input
             type="text"
@@ -98,10 +99,13 @@ export default function ChatForm() {
             <h2 className="text-xl mb-4 text-primary max-w-sm">
               {responseData.message}
             </h2>
+            <p className="text-gray-400 mb-2 text-sm">
+              Below is your bet code. Use it to create a bet on Strike.
+            </p>
             <code className="border-t border-t-white text-[10px] block p-4 whitespace-pre-wrap max-w-2xl max-h-[50vh] overflow-y-auto">
               {JSON.stringify(responseData.data, null, 2)}
             </code>
-            <button 
+            <button
               onClick={() => {
                 setResponse('');
                 setChatId('');

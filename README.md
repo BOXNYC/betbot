@@ -2,6 +2,11 @@
 
 ## Notes
 
+- Backend: Serverless Lambda functions
+- Frontend: React
+- Services: OpenAI, Vercel
+- DX: Lint, Typescript, TailwindCSS
+
 ### Assumptions made
 
 *I wasn't sure about the proper use of the PlayerCard or payload properties, here's my rationele.*
@@ -24,5 +29,7 @@
 - Animated transitions-in
 - Auth handled server-side with cookies, not client-site localStorage
 - Rendered the final `code` as HTML as default with a tab to see the code.
+- More code commenting
+- Separate API: Nest.js, FastAPI, Flask, etc.
 
 ### Thanks for the opportunity

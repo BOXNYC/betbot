@@ -19,4 +19,10 @@
 - Error messages may expose sensitive information
 - Public repo (temporarily)
 
+### Possible enhancements
+
+- Animated transitions-in
+- Auth handled server-side with cookies, not client-site localStorage
+- Rendered the final `code` as HTML as default with a tab to see the code.
+
 ### Thanks for the opportunity

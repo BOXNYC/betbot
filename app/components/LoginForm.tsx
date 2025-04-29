@@ -35,10 +35,10 @@ export default function LoginForm({onChange}: {onChange: (token: string) => void
             }
         
             const data = await res.json();
-            // console.log('Login successful:', data);
-            localStorage.setItem('token', data.token);
+            const token = `${data.id}|${data.token}`;
+            localStorage.setItem('token', token);
             setIsLoggedIn(true);
-            onChange(data.token);
+            onChange(token);
         } catch (err) {
             setError('Error: Invalid email or password');
             console.error(err);

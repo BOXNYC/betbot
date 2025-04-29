@@ -12,7 +12,7 @@ const isJSON = (str: string) => {
   }
 }
 
-export default function ChatForm() {
+export default function ChatForm({userId}: {userId?: number | null}) {
   const [prompt, setPrompt] = useState('');
   const [chatId, setChatId] = useState('');
   const [response, setResponse] = useState('');
@@ -103,7 +103,7 @@ export default function ChatForm() {
               Below is your bet code. Use it to create a bet on Strike.
             </p>
             <code className="border-t border-t-white text-[10px] block p-4 whitespace-pre-wrap max-w-2xl max-h-[50vh] overflow-y-auto">
-              {JSON.stringify(responseData.data, null, 2)}
+              {JSON.stringify({...responseData.data, user_id: userId}, null, 2)}
             </code>
             <button
               onClick={() => {

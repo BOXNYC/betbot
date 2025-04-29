@@ -33,7 +33,7 @@ export default function Home() {
         Welcome, I&apos;m BetBot, login, and let&apos;s get started!
       </p>}
       {!checkingToken && <>
-        {token && <ChatForm />}
+        {token && <ChatForm userId={token ? Number(token.split('|')[0]) : null} />}
         {!token && <LoginForm onChange={onLogin} />}
         {token && (
           <button

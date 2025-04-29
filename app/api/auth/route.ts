@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
   
   // Return the user token on success
   return NextResponse.json(
-    { token: user.token },
+    { id: user.id, token: user.token },
     { status: 200 }
   );
 }

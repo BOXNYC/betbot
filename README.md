@@ -6,6 +6,7 @@
 - Frontend: React
 - Services: OpenAI, Vercel
 - DX: Lint, Typescript, TailwindCSS
+- AI: Prompting-only, VERY slow ;/
 
 ### Assumptions made
 
@@ -23,9 +24,11 @@
 - Input validation is minimal
 - Error messages may expose sensitive information
 - Public repo (temporarily)
+- Data for AI should be vector embedded, not passed through prompts
 
 ### Possible enhancements
 
+- Use vector embeddings, custom LLM modeling, etc. to optimize and speed up AI and lower token costs as passing data through the prompt is expensive
 - Animated transitions-in
 - Auth handled server-side with cookies, not client-site localStorage
 - Rendered the final `code` as HTML as default with a tab to see the code.

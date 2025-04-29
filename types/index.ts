@@ -32,3 +32,12 @@ export type EventRow = {
 };
 
 export type EventRows = EventRow[];
+
+export type User = {
+    id: number;
+    email: string;
+    password: string;
+    token: string;
+}
+
+export type Users = User[];

@@ -35,7 +35,7 @@ export default function LoginForm({onChange}: {onChange: (token: string) => void
             }
         
             const data = await res.json();
-            console.log('Login successful:', data);
+            // console.log('Login successful:', data);
             localStorage.setItem('token', data.token);
             setIsLoggedIn(true);
             onChange(data.token);

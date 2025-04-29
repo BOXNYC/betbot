@@ -3,8 +3,6 @@
 import { User, Users } from '@/types';
 import { NextRequest, NextResponse } from 'next/server';
 
-// export const runtime = 'edge';
-
 const delay: (ms: number)=>Promise<void> = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 

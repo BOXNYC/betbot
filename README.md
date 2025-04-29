@@ -2,6 +2,7 @@
 
 ## Notes
 
+- Framework: Next.js
 - Backend: Serverless Lambda functions
 - Frontend: React
 - Services: OpenAI, Vercel
